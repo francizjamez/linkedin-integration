@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+const client_id = "86lqf2lme6rpmf";
+const state = "ajsdnsak12";
+const redirect_uri = "http://localhost:3000";
+const scope = ["r_liteprofile", "r_emailaddress"].join("%20");
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <a
+        href={`https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=${client_id}&redirect_uri=${redirect_uri}&state=${state}&scope=${scope}`}
+      >
+        Log in
+      </a>
     </div>
   );
 }
